@@ -1,0 +1,85 @@
+
+%\documentclass[german,reviews,examples]{isasthesis}
+\documentclass[english,reviews,examples]{isasthesis}
+
+\usepackage[utf8]{inputenc}
+% \usepackage{footbib}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{placeins}
+\usepackage[binary-units]{siunitx} %For the SI notation in Chap. 4
+\usepackage{multirow} %for tables
+\usepackage{dirtytalk}%for quotation
+\usepackage{csquotes}%also for quotation
+\usepackage{supertabular}%for long tabular
+\usepackage{svg}
+% \usepackage[T1]{fontenc}%italic in title
+\usepackage[toc,page]{appendix}
+
+% \usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+\graphicspath{{figures/}}
+
+\usepackage[style=ieee-alphabetic, sorting=none, backend=bibtex]{biblatex}
+\addbibresource{ref.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edit notation.tex if necessary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Document properties
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Sensitivity Analysis of a Multitarget Tracker with \\Machine Learning and Data Analysis Methods}
+\author{Weining Ye}
+% {31. Dezember 2020}
+\date{\today}
+
+\thesistype{Master's Thesis}
+\discussant{Prof. Dr.-Ing. Thomas Längle}
+\firstsupervisor{M.Sc. Marcel Reith-Braun}
+\secondsupervisor{Dr.-Ing. Florian Pfaff}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Document
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+    \maketitle
+
+    \input{0 abstract}
+
+    \maketoc
+    
+    \input{1 intro}
+    \input{2 theory}
+    \input{3 state of art}
+    % \input{4 opt 1}
+    % \input{5 opt 2}
+    \input{4 dataset}
+    \input{5 methodology}
+    \input{6 result}
+    \input{7 conclusion}
+    
+        
+    \cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{Bibliography}
+    \printbibliography %[heading=bibintoc]
+
+    % \begin{appendices}
+    % \input{appendix}
+    % \end{appendices}
+    
+    \appendix
+    \input{appendix}
+
+
+    
+\end{document}
+

@@ -1,0 +1,28 @@
+\chapter{Conclusion and Outlook}
+
+\section{Conclusion}
+
+In this thesis, the hyperparameters in the multitarget tracking algorithm were optimized with our implemented optimization methods. In the multitarget tracking algorithm, all the hyperparameters can be divided into two groups, respectively prediction hyperparameters and association hyperparameters. We performed the optimization with different methods on these two groups of hyperparameters.
+
+In the part of the prediction hyperparameters, the effects of each hyperparameter on the prediction error were first examined with the grid search method in both CV and CVA models. The measurement and prediction position noise power spectral density were recognized as the most effective hyperparameters. Then the Bayesian optimization method was applied for searching the best hyperparameter values that minimize the prediction error. We proved that the prediction error with the Bayesian optimized hyperparameters is lower than with the default and the grid-search optimized hyperparameters. In the end, the optimized values from different datasets were compared, and the relation between the material type and the optimized value of the prediction hyperparameters is discussed.
+
+In the association part, the concept of the robust range of the hyperparameters was introduced, and the robust range for all hyperparameters was determined with the SVMs. In the range of this thesis, the dataset from real materials and DEM datasets were tested. The SVMs representing the robust range of the hyperparameters were trained with the sampled tracking results from the DEM datasets. At the end of this part, the determination and restrictions of the hyperparameter values are also discussed.
+
+
+% But the methods for optimization raised in this thesis can also be applied to other datasets.
+
+\section{Future Works}
+
+As mentioned in \Sec{Test of Different Materials}, the random effect and other possible unknown factors made it hard to separate the optimized hyperparameters from different datasets. The effects of some important characteristics, such as the size of the particle, density of the particle and velocity of the belt are uninvestigated in this thesis. These works need be completed with more datasets that include particles with more different type and size as well as under different experiment situations including experiments on slides or free fall. After that, it would be interesting to raise some functions between the optimized hyperparameters and material properties. A further study on the coeffects of prediction and association hyperparameters is also recommended.
+
+Although the optimization methods were tested with some pre-recorded datasets, the performance of the methods with the dynamic scenes is still questioned. Some more efficient methods for the optimization of the hyperparameters should be developed. 
+
+The motion of each particle in the tracking is different. Thus, the optimized values of hyperparameters for each track should be also different. Using an adaptive Kalman filter with variable hyperparameters based on the particle features, including the material, shape and size of each particle, can have a positive effect on the overall tracking accuracy. This technique can be also applied on the case with dynamic mix ratios, which can get rid of the influence of the inaccuracies from the fixed hyperparameters.
+% Applying different position variance in different directions is also a considerable option.
+
+Except for the traditional multitarget tracking algorithms with Kalman filter, the multitarget tracking with neural networks is also raised by many researchers, such as in \cite{milan2016online} and \cite{wang2017survey}. Neural networks have been also applied in the tracking of particles on the belt. The results from Hornberger \cite{hornberger2018} and Thumm \cite{thumm2020} show that the tracking error with neural networks is better than with the algorithms based on Kalman filter in many situations. According to the introduction from Thumm \cite{thumm2020}, the neural networks are also able to learn the behavior of the particles. Therefore, It would be interesting to optimize the hyperparameters with the information extracted from the neural network training results.
+
+
+
+
+% Machine learning with neural networks is a field making great progress in these years. Neural networks can be easily combined with the image processing system, which enables more extension based on the appearance characteristics of the particles. A study on combining the traditional multitarget tracking algorithms and the neural networks with mixture of experts has been carried out from ISAS, and a future study on hyperparameter optimization using the information from the neural networks would have a desirable effect.  

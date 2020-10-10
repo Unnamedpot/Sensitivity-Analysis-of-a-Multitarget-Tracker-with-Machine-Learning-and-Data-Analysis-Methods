@@ -1,0 +1,12 @@
+
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+The multitarget tracking algorithm in optical belt sorting needs different hyperparameters that are vital for the accuracy of the tracking. The values of the hyperparameters are highly dependent upon the characteristics of the tracked objects and the setting of the experiments, such as the shape, size and density of the particles. However, these hyperparameters have been manually determined until now.
+
+The multitarget tracking algorithm consists of two parts: single target motion prediction and association. We present methods for finding values of the hyperparameters that reduce the errors in both parts in this thesis. For prediction hyperparameters, grid search is first used for showing the general effect of the hyperparameters. Then the Bayesian optimization method is validated with an artificial dataset. Finally, Bayesian optimization is performed to optimize the hyperparameters with real-world measurements of different materials. We can observe a significant enhancement of the prediction accuracy with optimized hyperparameters compared to default hyperparameters. We also discuss the difference of the optimized hyperparameter value between materials. The results show that the different material types and sizes of the particle can have an effect on the optimized value of hyperparameters.
+
+In the part of association hyperparameters, the concept of the robust range is first introduced, which indicates the range of hyperparameters that ensures no association errors. Then the general effect of the association hyperparameters is examined with grid search. Finally, the SVMs are trained to represent the robust range. The determination criteria for the robust range based on the average prediction error and particle density are also discussed, and the hyperparameters calculated from the criteria are checked with more datasets.
+\end{abstract}
+
+
+
